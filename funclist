@@ -1,0 +1,25 @@
+_asciiDigitToInt: CODE, 4054 0 120
+i2_writeCircularBuffer: CODE, 3400 0 190
+__stringdata: SMALLCONST, 576 0 18
+_writeCircularBuffer: CODE, 2756 0 232
+_main: CODE, 596 0 1140
+_release_stepper_motor: CODE, 3590 0 170
+_circularBufferFull: CODE, 3760 0 152
+_initUART: CODE, 4812 0 32
+_startStepperMotor: CODE, 4174 0 116
+__initialization: CODE, 4510 0 88
+i2_circularBufferFull: CODE, 4290 0 116
+_STEPPERISR: CODE, 1736 0 768
+_isr: CODE, 8 0 548
+_writeUART: CODE, 4608 0 76
+_readUART: CODE, 4684 0 72
+_UARTISR: CODE, 3912 0 142
+main@motor_pins: SMALLCONST, 564 0 12
+_writeUARTMessage: CODE, 2988 0 216
+_stepperMotorFinished: CODE, 4872 0 20
+_circularBufferEmpty: CODE, 4756 0 56
+_crlfetx_str: SMALLCONST, 560 0 4
+___wmul: CODE, 4406 0 104
+_initStepperMotor: CODE, 2504 0 252
+_readCircularBuffer: CODE, 3204 0 196
+Total: 4840

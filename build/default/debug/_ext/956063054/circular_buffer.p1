@@ -1,0 +1,215 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[s S1 `*uc 1 `ui 1 `ui 1 `ui 1 ]
+[n S1 . base size head tail ]
+[c E35 0 1 2 3 .. ]
+[n E35 . NO_ERROR BUFFER_OVERFLOW BUFFER_UNDERFLOW UNKNOWN_ERROR  ]
+"36 ../libs/circular_buffer\circular_buffer.h
+[v F53 `(uc ~T0 @X0 1 tf1`*S1 ]
+[v _circularBufferEmpty `TF53 ~T0 @X0 0 e ]
+"35
+[v F50 `(uc ~T0 @X0 1 tf1`*S1 ]
+[v _circularBufferFull `TF50 ~T0 @X0 0 e ]
+[; ;stdint.h: 13: typedef signed char int8_t;
+[; ;stdint.h: 20: typedef signed int int16_t;
+[; ;stdint.h: 28: typedef signed short long int int24_t;
+[; ;stdint.h: 36: typedef signed long int int32_t;
+[; ;stdint.h: 43: typedef unsigned char uint8_t;
+[; ;stdint.h: 49: typedef unsigned int uint16_t;
+[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
+[; ;stdint.h: 63: typedef unsigned long int uint32_t;
+[; ;stdint.h: 71: typedef signed char int_least8_t;
+[; ;stdint.h: 78: typedef signed int int_least16_t;
+[; ;stdint.h: 90: typedef signed short long int int_least24_t;
+[; ;stdint.h: 98: typedef signed long int int_least32_t;
+[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
+[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 137: typedef signed char int_fast8_t;
+[; ;stdint.h: 144: typedef signed int int_fast16_t;
+[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
+[; ;stdint.h: 164: typedef signed long int int_fast32_t;
+[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
+[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 200: typedef int32_t intmax_t;
+[; ;stdint.h: 205: typedef uint32_t uintmax_t;
+[; ;stdint.h: 210: typedef int16_t intptr_t;
+[; ;stdint.h: 215: typedef uint16_t uintptr_t;
+[; ;circular_buffer\circular_buffer.h: 17: typedef struct
+[; ;circular_buffer\circular_buffer.h: 18: {
+[; ;circular_buffer\circular_buffer.h: 19: uint8_t* base;
+[; ;circular_buffer\circular_buffer.h: 20: uint16_t size;
+[; ;circular_buffer\circular_buffer.h: 21: uint16_t head;
+[; ;circular_buffer\circular_buffer.h: 22: uint16_t tail;
+[; ;circular_buffer\circular_buffer.h: 23: }CircularBuffer;
+[; ;circular_buffer\circular_buffer.h: 25: typedef enum
+[; ;circular_buffer\circular_buffer.h: 26: {
+[; ;circular_buffer\circular_buffer.h: 27: NO_ERROR,
+[; ;circular_buffer\circular_buffer.h: 28: BUFFER_OVERFLOW,
+[; ;circular_buffer\circular_buffer.h: 29: BUFFER_UNDERFLOW,
+[; ;circular_buffer\circular_buffer.h: 30: UNKNOWN_ERROR
+[; ;circular_buffer\circular_buffer.h: 31: }CircularBufferError;
+[; ;circular_buffer\circular_buffer.h: 33: uint8_t readCircularBuffer(CircularBuffer*, CircularBufferError*);
+[; ;circular_buffer\circular_buffer.h: 34: void writeCircularBuffer(CircularBuffer*, uint8_t, CircularBufferError*);
+[; ;circular_buffer\circular_buffer.h: 35: inline uint8_t circularBufferFull(CircularBuffer*);
+[; ;circular_buffer\circular_buffer.h: 36: inline uint8_t circularBufferEmpty(CircularBuffer*);
+"25 ../libs/circular_buffer/circular_buffer.c
+[v _readCircularBuffer `(uc ~T0 @X0 1 ef2`*S1`*E35 ]
+{
+[; ;circular_buffer.c: 24: uint8_t readCircularBuffer(CircularBuffer* buf, CircularBufferError* error)
+[; ;circular_buffer.c: 25: {
+[e :U _readCircularBuffer ]
+[v _buf `*S1 ~T0 @X0 1 r1 ]
+[v _error `*E35 ~T0 @X0 1 r2 ]
+[f ]
+[; ;circular_buffer.c: 27: if(circularBufferEmpty(buf))
+"27
+[e $ ! != -> ( _circularBufferEmpty (1 _buf `i -> -> -> 0 `i `uc `i 3  ]
+[; ;circular_buffer.c: 28: {
+"28
+{
+[; ;circular_buffer.c: 29: *error = BUFFER_UNDERFLOW;
+"29
+[e = *U _error . `E35 2 ]
+[; ;circular_buffer.c: 30: return 0x00;
+"30
+[e ) -> -> 0 `i `uc ]
+[e $UE 2  ]
+"31
+}
+[e :U 3 ]
+"35
+[v _temp `uc ~T0 @X0 1 a ]
+[; ;circular_buffer.c: 31: }
+[; ;circular_buffer.c: 35: char temp = *(buf->base + buf->tail);
+[e = _temp *U + . *U _buf 0 * -> . *U _buf 3 `ux -> -> # *U . *U _buf 0 `ui `ux ]
+[; ;circular_buffer.c: 36: buf->tail++;
+"36
+[e ++ . *U _buf 3 -> -> 1 `i `ui ]
+[; ;circular_buffer.c: 39: if(buf->tail >= buf->size)
+"39
+[e $ ! >= . *U _buf 3 . *U _buf 1 4  ]
+[; ;circular_buffer.c: 40: {
+"40
+{
+[; ;circular_buffer.c: 41: buf->tail = 0;
+"41
+[e = . *U _buf 3 -> -> 0 `i `ui ]
+"42
+}
+[e :U 4 ]
+[; ;circular_buffer.c: 42: }
+[; ;circular_buffer.c: 45: *error = NO_ERROR;
+"45
+[e = *U _error . `E35 0 ]
+[; ;circular_buffer.c: 46: return temp;
+"46
+[e ) _temp ]
+[e $UE 2  ]
+[; ;circular_buffer.c: 47: }
+"47
+[e :UE 2 ]
+}
+"63
+[v _writeCircularBuffer `(v ~T0 @X0 1 ef3`*S1`uc`*E35 ]
+{
+[; ;circular_buffer.c: 62: void writeCircularBuffer(CircularBuffer* buf, uint8_t data, CircularBufferError* error)
+[; ;circular_buffer.c: 63: {
+[e :U _writeCircularBuffer ]
+[v _buf `*S1 ~T0 @X0 1 r1 ]
+[v _data `uc ~T0 @X0 1 r2 ]
+[v _error `*E35 ~T0 @X0 1 r3 ]
+[f ]
+[; ;circular_buffer.c: 65: if(circularBufferFull(buf))
+"65
+[e $ ! != -> ( _circularBufferFull (1 _buf `i -> -> -> 0 `i `uc `i 6  ]
+[; ;circular_buffer.c: 66: {
+"66
+{
+[; ;circular_buffer.c: 67: *error = BUFFER_OVERFLOW;
+"67
+[e = *U _error . `E35 1 ]
+[; ;circular_buffer.c: 68: return;
+"68
+[e $UE 5  ]
+"69
+}
+[e :U 6 ]
+[; ;circular_buffer.c: 69: }
+[; ;circular_buffer.c: 73: *(buf->base + buf->head) = data;
+"73
+[e = *U + . *U _buf 0 * -> . *U _buf 2 `ux -> -> # *U . *U _buf 0 `ui `ux _data ]
+[; ;circular_buffer.c: 74: buf->head++;
+"74
+[e ++ . *U _buf 2 -> -> 1 `i `ui ]
+[; ;circular_buffer.c: 77: if(buf->head >= buf->size)
+"77
+[e $ ! >= . *U _buf 2 . *U _buf 1 7  ]
+[; ;circular_buffer.c: 78: {
+"78
+{
+[; ;circular_buffer.c: 79: buf->head = 0;
+"79
+[e = . *U _buf 2 -> -> 0 `i `ui ]
+"80
+}
+[e :U 7 ]
+[; ;circular_buffer.c: 80: }
+[; ;circular_buffer.c: 83: *error = NO_ERROR;
+"83
+[e = *U _error . `E35 0 ]
+[; ;circular_buffer.c: 84: }
+"84
+[e :UE 5 ]
+}
+"95
+[v _circularBufferFull `TF50 ~T0 @X0 1 e ]
+{
+[; ;circular_buffer.c: 94: inline uint8_t circularBufferFull(CircularBuffer* buf)
+[; ;circular_buffer.c: 95: {
+[e :U _circularBufferFull ]
+[v _buf `*S1 ~T0 @X0 1 r1 ]
+[f ]
+"96
+[v _headTemp `ui ~T0 @X0 1 a ]
+[; ;circular_buffer.c: 96: uint16_t headTemp = buf->head;
+[e = _headTemp . *U _buf 2 ]
+[; ;circular_buffer.c: 97: if(++headTemp >= buf->size)
+"97
+[e $ ! >= =+ _headTemp -> -> 1 `i `ui . *U _buf 1 9  ]
+[; ;circular_buffer.c: 98: {
+"98
+{
+[; ;circular_buffer.c: 99: headTemp = 0;
+"99
+[e = _headTemp -> -> 0 `i `ui ]
+"100
+}
+[e :U 9 ]
+[; ;circular_buffer.c: 100: }
+[; ;circular_buffer.c: 101: return (headTemp == buf->tail);
+"101
+[e ) -> -> == _headTemp . *U _buf 3 `i `uc ]
+[e $UE 8  ]
+[; ;circular_buffer.c: 102: }
+"102
+[e :UE 8 ]
+}
+"113
+[v _circularBufferEmpty `TF53 ~T0 @X0 1 e ]
+{
+[; ;circular_buffer.c: 112: inline uint8_t circularBufferEmpty(CircularBuffer* buf)
+[; ;circular_buffer.c: 113: {
+[e :U _circularBufferEmpty ]
+[v _buf `*S1 ~T0 @X0 1 r1 ]
+[f ]
+[; ;circular_buffer.c: 114: return (buf->head == buf->tail);
+"114
+[e ) -> -> == . *U _buf 2 . *U _buf 3 `i `uc ]
+[e $UE 10  ]
+[; ;circular_buffer.c: 115: }
+"115
+[e :UE 10 ]
+}

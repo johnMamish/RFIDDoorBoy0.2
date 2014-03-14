@@ -1,0 +1,1262 @@
+Microchip MPLAB XC8 Compiler V1.12 ()
+
+Linker command line:
+
+--edf=C:\Program Files (x86)\Microchip\xc8\v1.12\dat\en_msgs.txt -cs \
+  -h+dist/default/debug\RFIDDoorBoy2.X.debug.sym -z -Q18LF14K22 -ol.obj \
+  -Mdist/default/debug/RFIDDoorBoy2.X.debug.map -E1 -ver=XC8 \
+  -ACODE=00h-03FFFh -ACONST=00h-03FFFh -ASMALLCONST=0200h-02FFhx62 \
+  -AMEDIUMCONST=0200h-03FFFh -ACOMRAM=01h-05Fh -AABS1=00h-01FFh \
+  -ABIGRAM=01h-01FFh -ARAM=060h-0FFh,0100h-01FFh -ABANK0=060h-0FFh \
+  -ABANK1=0100h-01FFh -ASFR=0F60h-0FFFh \
+  -preset_vec=00h,intcode=08h,intcodelo,powerup,init,end_init \
+  -pramtop=0200h -psmallconst=SMALLCONST -pmediumconst=MEDIUMCONST \
+  -pconst=CONST -AFARRAM=00h-00h -ACONFIG=0300000h-030000Dh -pconfig=CONFIG \
+  -AIDLOC=0200000h-0200007h -pidloc=IDLOC -AEEDATA=0F00000h-0F000FFh \
+  -peeprom_data=EEDATA \
+  -prdata=COMRAM,nvrram=COMRAM,nvbit=COMRAM,rbss=COMRAM,rbit=COMRAM \
+  -pfarbss=FARRAM,fardata=FARRAM \
+  -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
+  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE \
+  C:\Users\JOHNMA~1\AppData\Local\Temp\s4ak.obj \
+  dist/default/debug\RFIDDoorBoy2.X.debug.obj 
+
+Object code version is 3.10
+
+Machine type is 18LF14K22
+
+Call graph: (short form)
+
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+C:\Users\JOHNMA~1\AppData\Local\Temp\s4ak.obj
+                end_init                            22C      22C        4        4       0
+                reset_vec                             0        0        4        0       0
+                idloc                            200000   200000        8   200000       0
+                config                           300000   300000        E   300000       0
+dist/default/debug\RFIDDoorBoy2.X.debug.obj
+                intcode                               8        8      224        4       0
+                smallconst                          230      230       24      118       0
+                text19                             10C2     10C2       74      12A       0
+                text18                              D48      D48       BE      12A       0
+                text17                             1294     1294       38      12A       0
+                text16                              C84      C84       C4      12A       0
+                text15                              F48      F48       8E      12A       0
+                text14                             124C     124C       48      12A       0
+                text13                              FD6      FD6       78      12A       0
+                text12                              6C8      6C8      300      12A       0
+                text10                             1136     1136       68      12A       0
+                text9                               EB0      EB0       98      12A       0
+                text8                               AC4      AC4       E8      12A       0
+                text7                              104E     104E       74      12A       0
+                text6                               E06      E06       AA      12A       0
+                text5                              1308     1308       14      12A       0
+                text4                              1200     1200       4C      12A       0
+                text3                               BAC      BAC       D8      12A       0
+                text2                               9C8      9C8       FC      12A       0
+                text1                              12CC     12CC       20      12A       0
+                text0                               254      254      474      12A       0
+                cstackCOMRAM                          1        1       20        1       1
+                cstackBANK0                          BA       BA       27       60       1
+                dataBANK0                            E1       E1       1C       60       1
+                bssBANK0                             60       60       5A       60       1
+                dataCOMRAM                           3C       3C        8        1       1
+                bssCOMRAM                            21       21       1B        1       1
+                cinit                              119E     119E       62      12A       0
+                idataBANK0                         12EC     12EC       1C      12A       0
+                idataCOMRAM                        131C     131C        8      12A       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   CODE           
+                end_init                            22C      22C        4         0
+                intcode                               8        8      224         0
+                reset_vec                             0        0        4         0
+                text19                             10C2     10C2       74         0
+                text18                              D48      D48       BE         0
+                text17                             1294     1294       38         0
+                text16                              C84      C84       C4         0
+                text15                              F48      F48       8E         0
+                text14                             124C     124C       48         0
+                text13                              FD6      FD6       78         0
+                text12                              6C8      6C8      300         0
+                text10                             1136     1136       68         0
+                text9                               EB0      EB0       98         0
+                text8                               AC4      AC4       E8         0
+                text7                              104E     104E       74         0
+                text6                               E06      E06       AA         0
+                text5                              1308     1308       14         0
+                text4                              1200     1200       4C         0
+                text3                               BAC      BAC       D8         0
+                text2                               9C8      9C8       FC         0
+                text1                              12CC     12CC       20         0
+                text0                               254      254      474         0
+                cinit                              119E     119E       62         0
+                idataBANK0                         12EC     12EC       1C         0
+                idataCOMRAM                        131C     131C        8         0
+
+        CLASS   CONST          
+
+        CLASS   SMALLCONST     
+                smallconst                          230      230       24         0
+
+        CLASS   MEDIUMCONST    
+
+        CLASS   COMRAM         
+                cstackCOMRAM                          1        1       20         1
+                dataCOMRAM                           3C       3C        8         1
+                bssCOMRAM                            21       21       1B         1
+
+        CLASS   ABS1           
+
+        CLASS   BIGRAM         
+
+        CLASS   RAM            
+
+        CLASS   BANK0          
+                cstackBANK0                          BA       BA       27         1
+                dataBANK0                            E1       E1       1C         1
+                bssBANK0                             60       60       5A         1
+
+        CLASS   BANK1          
+
+        CLASS   SFR            
+
+        CLASS   FARRAM         
+
+        CLASS   CONFIG         
+                config                           300000   300000        E         0
+
+        CLASS   IDLOC          
+                idloc                            200000   200000        8         0
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
+
+                reset_vec                      000000  000004  000004         0       0  CODE    
+                cstackCOMRAM                   000001  000043  000044         1       1  COMRAM  
+                intcode                        000008  000228  000230         4       0  CODE    
+                bssBANK0                       000060  00009D  0000FD        60       1  BANK0   
+                smallconst                     000230  000024  000254       118       0  SMALLCON
+                text0                          000254  0010D0  001324       12A       0  CODE    
+                idloc                          200000  000008  200008    200000       0  IDLOC   
+                config                         300000  00000E  30000E    300000       0  CONFIG  
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            0000FD-0000FF                3
+        BANK1            000100-0001FF              100
+        BIGRAM           000044-00005F               1C
+                         0000FD-0001FF              103
+        CODE             000004-000007                4
+                         001324-003FFF             2CDC
+        COMRAM           000044-00005F               1C
+        CONST            000004-000007                4
+                         001324-003FFF             2CDC
+        EEDATA           F00000-F000FF              100
+        MEDIUMCONST      001324-003FFF             2CDC
+        RAM              0000FD-0001FF                3
+        SFR              000F60-000FFF               A0
+        SMALLCONST       001324-003FFF              100
+
+                                  Symbol Table
+
+?___wmul                        cstackBANK0  0000BA
+?_asciiDigitToInt               cstackCOMRAM 000001
+?_circularBufferEmpty           cstackCOMRAM 000001
+?_circularBufferFull            cstackBANK0  0000BA
+?_initStepperMotor              cstackBANK0  0000BA
+?_readCircularBuffer            cstackCOMRAM 000003
+?_readUART                      cstackCOMRAM 00000C
+?_startStepperMotor             cstackBANK0  0000BA
+?_writeCircularBuffer           cstackBANK0  0000BE
+?_writeUART                     cstackBANK0  0000C7
+?_writeUARTMessage              cstackBANK0  0000C7
+?i2_circularBufferFull          cstackCOMRAM 000001
+?i2_writeCircularBuffer         cstackCOMRAM 000005
+UARTISR@e                       cstackCOMRAM 00000E
+UARTISR@e_809                   cstackCOMRAM 00000F
+_ANSEL                          (abs)        000F7E
+_ANSELH                         (abs)        000F7F
+_BAUDCONbits                    (abs)        000FB8
+_CCP1CONbits                    (abs)        000FBD
+_INTCONbits                     (abs)        000FF2
+_LATC                           (abs)        000F8B
+_OSCCONbits                     (abs)        000FD3
+_PIE1bits                       (abs)        000F9D
+_PIR1bits                       (abs)        000F9E
+_RCON                           (abs)        000FD0
+_RCONbits                       (abs)        000FD0
+_RCREG                          (abs)        000FAE
+_RCSTAbits                      (abs)        000FAB
+_SPBRG                          (abs)        000FAF
+_STEPPERISR                     text12       0006C8
+_T0CONbits                      (abs)        000FD5
+_T1CONbits                      (abs)        000FCD
+_TMR0                           (abs)        000FD6
+_TMR1                           (abs)        000FCE
+_TRISBbits                      (abs)        000F93
+_TRISC                          (abs)        000F94
+_TXREG                          (abs)        000FAD
+_TXSTAbits                      (abs)        000FAC
+_UARTISR                        text15       000F48
+__CFG_BBSIZ$OFF                 (abs)        000000
+__CFG_BOREN$SBORDIS             (abs)        000000
+__CFG_BORV$19                   (abs)        000000
+__CFG_CP0$OFF                   (abs)        000000
+__CFG_CP1$OFF                   (abs)        000000
+__CFG_CPB$OFF                   (abs)        000000
+__CFG_CPD$OFF                   (abs)        000000
+__CFG_EBTR0$OFF                 (abs)        000000
+__CFG_EBTR1$OFF                 (abs)        000000
+__CFG_EBTRB$OFF                 (abs)        000000
+__CFG_FCMEN$OFF                 (abs)        000000
+__CFG_FOSC$IRC                  (abs)        000000
+__CFG_HFOFST$OFF                (abs)        000000
+__CFG_IESO$OFF                  (abs)        000000
+__CFG_LVP$OFF                   (abs)        000000
+__CFG_MCLRE$ON                  (abs)        000000
+__CFG_PCLKEN$OFF                (abs)        000000
+__CFG_PLLEN$OFF                 (abs)        000000
+__CFG_PWRTEN$OFF                (abs)        000000
+__CFG_STVREN$ON                 (abs)        000000
+__CFG_WDTEN$OFF                 (abs)        000000
+__CFG_WDTPS$32768               (abs)        000000
+__CFG_WRT0$OFF                  (abs)        000000
+__CFG_WRT1$OFF                  (abs)        000000
+__CFG_WRTB$OFF                  (abs)        000000
+__CFG_WRTC$OFF                  (abs)        000000
+__CFG_WRTD$OFF                  (abs)        000000
+__CFG_XINST$OFF                 (abs)        000000
+__HRAM                          (abs)        000000
+__Habs1                         abs1         000000
+__Hbank0                        bank0        000000
+__Hbank1                        bank1        000000
+__Hbigbss                       bigbss       000000
+__Hbigdata                      bigdata      000000
+__Hbigram                       bigram       000000
+__Hbss                          bss          000000
+__HbssBANK0                     bssBANK0     000000
+__HbssCOMRAM                    bssCOMRAM    000000
+__Hcinit                        cinit        000000
+__Hclrtext                      clrtext      000000
+__Hcomram                       comram       000000
+__Hconfig                       config       30000E
+__Hconst                        const        000000
+__HcstackBANK0                  cstackBANK0  000000
+__HcstackCOMRAM                 cstackCOMRAM 000000
+__Hdata                         data         000000
+__HdataBANK0                    dataBANK0    000000
+__HdataCOMRAM                   dataCOMRAM   000000
+__Heeprom_data                  eeprom_data  000000
+__Hend_init                     end_init     000230
+__Hfarbss                       farbss       000000
+__Hfardata                      fardata      000000
+__Hibigdata                     ibigdata     000000
+__Hidata                        idata        000000
+__HidataBANK0                   idataBANK0   000000
+__HidataCOMRAM                  idataCOMRAM  000000
+__Hidloc                        idloc        200008
+__Hifardata                     ifardata     000000
+__Hinit                         init         00022C
+__Hintcode                      intcode      00022C
+__Hintcode_body                 intcode_body 000000
+__Hintcodelo                    intcodelo    00022C
+__Hintentry                     intentry     000000
+__Hintret                       intret       000000
+__Hintsave_regs                 intsave_regs 000000
+__Hirdata                       irdata       000000
+__Hmediumconst                  mediumconst  000000
+__Hnvbit                        nvbit        000000
+__Hnvrram                       nvrram       000000
+__Hparam                        rparam       000000
+__Hpowerup                      powerup      00022C
+__Hram                          ram          000000
+__Hramtop                       ramtop       000200
+__Hrbit                         rbit         000000
+__Hrbss                         rbss         000000
+__Hrdata                        rdata        000000
+__Hreset_vec                    reset_vec    000004
+__Hrparam                       rparam       000000
+__Hsfr                          sfr          000000
+__Hsmallconst                   smallconst   000254
+__Hstruct                       struct       000000
+__Htemp                         temp         000000
+__Htext                         text         000000
+__Htext0                        text0        000000
+__Htext1                        text1        000000
+__Htext10                       text10       000000
+__Htext12                       text12       000000
+__Htext13                       text13       000000
+__Htext14                       text14       000000
+__Htext15                       text15       000000
+__Htext16                       text16       000000
+__Htext17                       text17       000000
+__Htext18                       text18       000000
+__Htext19                       text19       000000
+__Htext2                        text2        000000
+__Htext3                        text3        000000
+__Htext4                        text4        000000
+__Htext5                        text5        000000
+__Htext6                        text6        000000
+__Htext7                        text7        000000
+__Htext8                        text8        000000
+__Htext9                        text9        000000
+__LRAM                          (abs)        000001
+__Labs1                         abs1         000000
+__Lbank0                        bank0        000000
+__Lbank1                        bank1        000000
+__Lbigbss                       bigbss       000000
+__Lbigdata                      bigdata      000000
+__Lbigram                       bigram       000000
+__Lbss                          bss          000000
+__LbssBANK0                     bssBANK0     000000
+__LbssCOMRAM                    bssCOMRAM    000000
+__Lcinit                        cinit        000000
+__Lclrtext                      clrtext      000000
+__Lcomram                       comram       000000
+__Lconfig                       config       300000
+__Lconst                        const        000000
+__LcstackBANK0                  cstackBANK0  000000
+__LcstackCOMRAM                 cstackCOMRAM 000000
+__Ldata                         data         000000
+__LdataBANK0                    dataBANK0    000000
+__LdataCOMRAM                   dataCOMRAM   000000
+__Leeprom_data                  eeprom_data  000000
+__Lend_init                     end_init     00022C
+__Lfarbss                       farbss       000000
+__Lfardata                      fardata      000000
+__Libigdata                     ibigdata     000000
+__Lidata                        idata        000000
+__LidataBANK0                   idataBANK0   000000
+__LidataCOMRAM                  idataCOMRAM  000000
+__Lidloc                        idloc        200000
+__Lifardata                     ifardata     000000
+__Linit                         init         00022C
+__Lintcode                      intcode      000008
+__Lintcode_body                 intcode_body 000000
+__Lintcodelo                    intcodelo    00022C
+__Lintentry                     intentry     000000
+__Lintret                       intret       000000
+__Lintsave_regs                 intsave_regs 000000
+__Lirdata                       irdata       000000
+__Lmediumconst                  mediumconst  000000
+__Lnvbit                        nvbit        000000
+__Lnvrram                       nvrram       000000
+__Lparam                        rparam       000000
+__Lpowerup                      powerup      00022C
+__Lram                          ram          000000
+__Lramtop                       ramtop       000200
+__Lrbit                         rbit         000000
+__Lrbss                         rbss         000000
+__Lrdata                        rdata        000000
+__Lreset_vec                    reset_vec    000000
+__Lrparam                       rparam       000000
+__Lsfr                          sfr          000000
+__Lsmallconst                   smallconst   000230
+__Lstruct                       struct       000000
+__Ltemp                         temp         000000
+__Ltext                         text         000000
+__Ltext0                        text0        000000
+__Ltext1                        text1        000000
+__Ltext10                       text10       000000
+__Ltext12                       text12       000000
+__Ltext13                       text13       000000
+__Ltext14                       text14       000000
+__Ltext15                       text15       000000
+__Ltext16                       text16       000000
+__Ltext17                       text17       000000
+__Ltext18                       text18       000000
+__Ltext19                       text19       000000
+__Ltext2                        text2        000000
+__Ltext3                        text3        000000
+__Ltext4                        text4        000000
+__Ltext5                        text5        000000
+__Ltext6                        text6        000000
+__Ltext7                        text7        000000
+__Ltext8                        text8        000000
+__Ltext9                        text9        000000
+__S0                            (abs)        30000E
+__S1                            (abs)        0000FD
+___wmul                         text10       001136
+___wmul@multiplicand            cstackBANK0  0000BC
+___wmul@multiplier              cstackBANK0  0000BA
+___wmul@product                 cstackBANK0  0000BE
+__accesstop                     (abs)        000060
+__activetblptr                  (abs)        000002
+__end_of_STEPPERISR             text12       0009C8
+__end_of_UARTISR                text15       000FD6
+__end_of___wmul                 text10       00119E
+__end_of__initialization        cinit        0011F6
+__end_of__stringdata            smallconst   000252
+__end_of_asciiDigitToInt        text13       00104E
+__end_of_circularBufferEmpty    text17       0012CC
+__end_of_circularBufferFull     text9        000F48
+__end_of_crlfetx_str            smallconst   000234
+__end_of_initStepperMotor       text2        000AC4
+__end_of_initUART               text1        0012EC
+__end_of_isr                    intcode      00022C
+__end_of_main                   text0        0006C8
+__end_of_readCircularBuffer     text16       000D48
+__end_of_readUART               text14       001294
+__end_of_release_stepper_motor  text6        000EB0
+__end_of_startStepperMotor      text7        0010C2
+__end_of_stepperMotorFinished   text5        00131C
+__end_of_writeCircularBuffer    text8        000BAC
+__end_of_writeUART              text4        00124C
+__end_of_writeUARTMessage       text3        000C84
+__end_ofi2_circularBufferFull   text19       001136
+__end_ofi2_writeCircularBuffer  text18       000E06
+__end_ofmain@motor_pins         smallconst   000240
+__initialization                cinit        00119E
+__mediumconst                   mediumconst  000000
+__pbssBANK0                     bssBANK0     000060
+__pbssCOMRAM                    bssCOMRAM    000021
+__pcinit                        cinit        00119E
+__pcstackBANK0                  cstackBANK0  0000BA
+__pcstackCOMRAM                 cstackCOMRAM 000001
+__pdataBANK0                    dataBANK0    0000E1
+__pdataCOMRAM                   dataCOMRAM   00003C
+__pidataBANK0                   idataBANK0   0012EC
+__pidataCOMRAM                  idataCOMRAM  00131C
+__pintcode                      intcode      000008
+__psmallconst                   smallconst   000230
+__ptext0                        text0        000254
+__ptext1                        text1        0012CC
+__ptext10                       text10       001136
+__ptext12                       text12       0006C8
+__ptext13                       text13       000FD6
+__ptext14                       text14       00124C
+__ptext15                       text15       000F48
+__ptext16                       text16       000C84
+__ptext17                       text17       001294
+__ptext18                       text18       000D48
+__ptext19                       text19       0010C2
+__ptext2                        text2        0009C8
+__ptext3                        text3        000BAC
+__ptext4                        text4        001200
+__ptext5                        text5        001308
+__ptext6                        text6        000E06
+__ptext7                        text7        00104E
+__ptext8                        text8        000AC4
+__ptext9                        text9        000EB0
+__ramtop                        ramtop       000200
+__size_of_STEPPERISR            (abs)        000000
+__size_of_UARTISR               (abs)        000000
+__size_of___wmul                (abs)        000000
+__size_of_asciiDigitToInt       (abs)        000000
+__size_of_circularBufferEmpty   (abs)        000000
+__size_of_circularBufferFull    (abs)        000000
+__size_of_initStepperMotor      (abs)        000000
+__size_of_initUART              (abs)        000000
+__size_of_isr                   (abs)        000000
+__size_of_main                  (abs)        000000
+__size_of_readCircularBuffer    (abs)        000000
+__size_of_readUART              (abs)        000000
+__size_of_release_stepper_motor (abs)        000000
+__size_of_startStepperMotor     (abs)        000000
+__size_of_stepperMotorFinished  (abs)        000000
+__size_of_writeCircularBuffer   (abs)        000000
+__size_of_writeUART             (abs)        000000
+__size_of_writeUARTMessage      (abs)        000000
+__size_ofi2_circularBufferFull  (abs)        000000
+__size_ofi2_writeCircularBuffer (abs)        000000
+__smallconst                    smallconst   000230
+__stringdata                    smallconst   000240
+_allowedKeys                    dataBANK0    0000E1
+_asciiDigitToInt                text13       000FD6
+_circularBufferEmpty            text17       001294
+_circularBufferFull             text9        000EB0
+_crlfetx_str                    smallconst   000230
+_currentDoor                    bssBANK0     000072
+_currentStep                    bssCOMRAM    000031
+_direction                      bssCOMRAM    000032
+_doorOpenTime                   bssBANK0     00006A
+_initStepperMotor               text2        0009C8
+_initUART                       text1        0012CC
+_isr                            intcode      000008
+_keyName                        bssBANK0     0000B4
+_keyNameIndex                   bssCOMRAM    000033
+_keyReadyFlag                   bssBANK0     000073
+_main                           text0        000254
+_motor_pins                     bssCOMRAM    000021
+_num                            bssBANK0     000060
+_previousDirection              bssCOMRAM    000034
+_readCircularBuffer             text16       000C84
+_readUART                       text14       00124C
+_receiveBuffer                  dataBANK0    0000F5
+_receiveData                    bssBANK0     000074
+_release_stepper_motor          text6        000E06
+_speed                          bssCOMRAM    00002D
+_startStepperMotor              text7        00104E
+_stepperMotorFinished           text5        001308
+_stepsToGo                      bssCOMRAM    00002F
+_sysTick                        bssBANK0     00006E
+_transmitBuffer                 dataCOMRAM   00003C
+_transmitData                   bssBANK0     000094
+_writeCircularBuffer            text8        000AC4
+_writeUART                      text4        001200
+_writeUARTMessage               text3        000BAC
+asciiDigitToInt@c               cstackCOMRAM 000001
+circularBufferEmpty@buf         cstackCOMRAM 000001
+circularBufferFull@buf          cstackBANK0  0000BA
+circularBufferFull@headTemp     cstackBANK0  0000BC
+end_of_initialization           cinit        0011F6
+i2_circularBufferFull           text19       0010C2
+i2_writeCircularBuffer          text18       000D48
+i2circularBufferFull@buf        cstackCOMRAM 000001
+i2circularBufferFull@headTemp   cstackCOMRAM 000003
+i2writeCircularBuffer@buf       cstackCOMRAM 000005
+i2writeCircularBuffer@data      cstackCOMRAM 000007
+i2writeCircularBuffer@error     cstackCOMRAM 000008
+initStepperMotor@motor_pins_in  cstackBANK0  0000BA
+intlevel0                       text         000000
+intlevel1                       text         000000
+intlevel2                       text         000000
+intlevel3                       text         000000
+isr@calcd_checksum              bssCOMRAM    000035
+isr@checksum                    bssCOMRAM    000036
+isr@e                           cstackCOMRAM 00001F
+isr@field_count                 bssCOMRAM    000037
+isr@msb_lsb                     bssCOMRAM    000039
+isr@readVal                     cstackCOMRAM 000020
+isr@read_byte                   bssCOMRAM    00003A
+isr@read_state                  bssCOMRAM    00003B
+main@UARTErrorCode              cstackBANK0  0000DE
+main@e                          cstackBANK0  0000DB
+main@i                          cstackBANK0  0000DC
+main@j                          cstackBANK0  0000DF
+main@keyGood                    cstackBANK0  0000DA
+main@motor_pins                 smallconst   000234
+main@wait                       cstackBANK0  0000D6
+readCircularBuffer@buf          cstackCOMRAM 000003
+readCircularBuffer@error        cstackCOMRAM 000005
+readCircularBuffer@temp         cstackCOMRAM 00000B
+readUART@e                      cstackCOMRAM 00000F
+readUART@error                  cstackCOMRAM 00000C
+readUART@ret                    cstackCOMRAM 00000E
+start                           init         00022C
+startStepperMotor@dir           cstackBANK0  0000BC
+startStepperMotor@distance      cstackBANK0  0000BA
+startStepperMotor@targetSpeed   cstackBANK0  0000BD
+start_initialization            cinit        00119E
+writeCircularBuffer@buf         cstackBANK0  0000BE
+writeCircularBuffer@data        cstackBANK0  0000C0
+writeCircularBuffer@error       cstackBANK0  0000C1
+writeUART@data                  cstackBANK0  0000C7
+writeUART@e                     cstackBANK0  0000CA
+writeUART@error                 cstackBANK0  0000C8
+writeUARTMessage@e              cstackBANK0  0000CD
+writeUARTMessage@error          cstackBANK0  0000C9
+writeUARTMessage@i              cstackBANK0  0000CB
+writeUARTMessage@msg            cstackBANK0  0000C7
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 301 in file "src/main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  j               2   37[BANK0 ] int 
+  i               2   34[BANK0 ] int 
+  keyGood         1   32[BANK0 ] unsigned char 
+  wait            4   28[BANK0 ] unsigned long 
+  UARTErrorCod    1   36[BANK0 ] unsigned char 
+  e               1   33[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr0l, fsr0h, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, pclat, tosl, structret, tblptrl, tblptrh, tblptru, prodl, prodh, bsr, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0      11       0
+      Temps:          0       8       0
+      Totals:         0      19       0
+Total ram usage:       19 bytes
+ Hardware stack levels required when called:    7
+ This function calls:
+		_initUART
+		_initStepperMotor
+		_writeUARTMessage
+		_writeUART
+		___wmul
+		_startStepperMotor
+		_stepperMotorFinished
+		_release_stepper_motor
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function _initUART *****************
+ Defined at:
+		line 25 in file "../libs/UART/UART_lib.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _initStepperMotor *****************
+ Defined at:
+		line 48 in file "../libs/stepper_motor/stepper_motor_lib.c"
+ Parameters:    Size  Location     Type
+  motor_pins_i    2    0[BANK0 ] PTR struct .
+		 -> main@motor_pins(12), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0, tblptrl, tblptrh, tblptru
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       2       0
+      Locals:         0       0       0
+      Temps:          0       5       0
+      Totals:         0       7       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _writeUARTMessage *****************
+ Defined at:
+		line 91 in file "../libs/UART/UART_lib.c"
+ Parameters:    Size  Location     Type
+  msg             2   13[BANK0 ] PTR const unsigned char 
+		 -> STR_3(2), STR_2(10), STR_1(8), keyName(6), 
+  error           2   15[BANK0 ] PTR unsigned char 
+		 -> main@UARTErrorCode(1), main@e(1), 
+ Auto vars:     Size  Location     Type
+  i               2   17[BANK0 ] PTR unsigned char 
+		 -> STR_3(2), STR_2(10), STR_1(8), keyName(6), 
+  e               1   19[BANK0 ] enum E3782
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr0l, fsr0h, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       4       0
+      Locals:         0       3       0
+      Temps:          0       0       0
+      Totals:         0       7       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_circularBufferFull
+		_writeCircularBuffer
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _writeUART *****************
+ Defined at:
+		line 66 in file "../libs/UART/UART_lib.c"
+ Parameters:    Size  Location     Type
+  data            1   13[BANK0 ] unsigned char 
+  error           2   14[BANK0 ] PTR unsigned char 
+		 -> main@e(1), 
+ Auto vars:     Size  Location     Type
+  e               1   16[BANK0 ] enum E3782
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       3       0
+      Locals:         0       1       0
+      Temps:          0       0       0
+      Totals:         0       4       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_writeCircularBuffer
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _stepperMotorFinished *****************
+ Defined at:
+		line 117 in file "../libs/stepper_motor/stepper_motor_lib.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _release_stepper_motor *****************
+ Defined at:
+		line 125 in file "../libs/stepper_motor/stepper_motor_lib.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       2       0
+      Totals:         0       2       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _startStepperMotor *****************
+ Defined at:
+		line 68 in file "../libs/stepper_motor/stepper_motor_lib.c"
+ Parameters:    Size  Location     Type
+  distance        2    0[BANK0 ] unsigned int 
+  dir             1    2[BANK0 ] enum E72
+  targetSpeed     2    3[BANK0 ] unsigned int 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       5       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       5       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _writeCircularBuffer *****************
+ Defined at:
+		line 63 in file "../libs/circular_buffer/circular_buffer.c"
+ Parameters:    Size  Location     Type
+  buf             2    4[BANK0 ] PTR struct .
+		 -> receiveBuffer(8), transmitBuffer(8), 
+  data            1    6[BANK0 ] unsigned char 
+  error           2    7[BANK0 ] PTR enum E35
+		 -> UARTISR@e_809(1), writeUARTMessage@e(1), writeUART@e(1), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       5       0
+      Locals:         0       0       0
+      Temps:          0       4       0
+      Totals:         0       9       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		_circularBufferFull
+ This function is called by:
+		_writeUART
+		_writeUARTMessage
+ This function uses a non-reentrant model
+
+
+ *************** function _circularBufferFull *****************
+ Defined at:
+		line 95 in file "../libs/circular_buffer/circular_buffer.c"
+ Parameters:    Size  Location     Type
+  buf             2    0[BANK0 ] PTR struct .
+		 -> receiveBuffer(8), transmitBuffer(8), 
+ Auto vars:     Size  Location     Type
+  headTemp        2    2[BANK0 ] unsigned int 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       2       0
+      Locals:         0       2       0
+      Temps:          0       0       0
+      Totals:         0       4       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		Nothing
+ This function is called by:
+		_writeUARTMessage
+		_writeCircularBuffer
+ This function uses a non-reentrant model
+
+
+ *************** function ___wmul *****************
+ Defined at:
+		line 3 in file "C:\Program Files (x86)\Microchip\xc8\v1.12\sources\wmul.c"
+ Parameters:    Size  Location     Type
+  multiplier      2    0[BANK0 ] unsigned int 
+  multiplicand    2    2[BANK0 ] unsigned int 
+ Auto vars:     Size  Location     Type
+  product         2    4[BANK0 ] unsigned int 
+ Return value:  Size  Location     Type
+                  2    0[BANK0 ] unsigned int 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       4       0
+      Locals:         0       2       0
+      Temps:          0       0       0
+      Totals:         0       6       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _isr *****************
+ Defined at:
+		line 152 in file "src/main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  readVal         1   31[COMRAM] unsigned char 
+  e               1   30[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         2       0       0
+      Temps:         15       0       0
+      Totals:        17       0       0
+Total ram usage:       17 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_UARTISR
+		_STEPPERISR
+		_readUART
+		_asciiDigitToInt
+ This function is called by:
+		Interrupt level 2
+ This function uses a non-reentrant model
+
+
+ *************** function _STEPPERISR *****************
+ Defined at:
+		line 137 in file "../libs/stepper_motor/stepper_motor_lib.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          3       0       0
+      Totals:         3       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_isr
+ This function uses a non-reentrant model
+
+
+ *************** function _asciiDigitToInt *****************
+ Defined at:
+		line 132 in file "src/main.c"
+ Parameters:    Size  Location     Type
+  c               1    0[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  2    0[COMRAM] int 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         2       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_isr
+ This function uses a non-reentrant model
+
+
+ *************** function _readUART *****************
+ Defined at:
+		line 112 in file "../libs/UART/UART_lib.c"
+ Parameters:    Size  Location     Type
+  error           2   11[COMRAM] PTR unsigned char 
+		 -> isr@e(1), 
+ Auto vars:     Size  Location     Type
+  e               1   14[COMRAM] enum E3782
+  ret             1   13[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         2       0       0
+      Locals:         2       0       0
+      Temps:          0       0       0
+      Totals:         4       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_readCircularBuffer
+ This function is called by:
+		_isr
+ This function uses a non-reentrant model
+
+
+ *************** function _UARTISR *****************
+ Defined at:
+		line 133 in file "../libs/UART/UART_lib.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  e               1   14[COMRAM] enum E3782
+  e               1   13[COMRAM] enum E3782
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         2       0       0
+      Temps:          0       0       0
+      Totals:         2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_circularBufferEmpty
+		_readCircularBuffer
+		i2_circularBufferFull
+		i2_writeCircularBuffer
+ This function is called by:
+		_isr
+ This function uses a non-reentrant model
+
+
+ *************** function _readCircularBuffer *****************
+ Defined at:
+		line 25 in file "../libs/circular_buffer/circular_buffer.c"
+ Parameters:    Size  Location     Type
+  buf             2    2[COMRAM] PTR struct .
+		 -> receiveBuffer(8), transmitBuffer(8), 
+  error           2    4[COMRAM] PTR enum E35
+		 -> UARTISR@e(1), readUART@e(1), 
+ Auto vars:     Size  Location     Type
+  temp            1   10[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         4       0       0
+      Locals:         1       0       0
+      Temps:          4       0       0
+      Totals:         9       0       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_circularBufferEmpty
+ This function is called by:
+		_readUART
+		_UARTISR
+ This function uses a non-reentrant model
+
+
+ *************** function _circularBufferEmpty *****************
+ Defined at:
+		line 113 in file "../libs/circular_buffer/circular_buffer.c"
+ Parameters:    Size  Location     Type
+  buf             2    0[COMRAM] PTR struct .
+		 -> receiveBuffer(8), transmitBuffer(8), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         2       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_UARTISR
+		_readCircularBuffer
+ This function uses a non-reentrant model
+
+
+ *************** function i2_writeCircularBuffer *****************
+ Defined at:
+		line 63 in file "../libs/circular_buffer/circular_buffer.c"
+ Parameters:    Size  Location     Type
+  writeCircula    2    4[COMRAM] PTR struct .
+		 -> receiveBuffer(8), transmitBuffer(8), 
+  writeCircula    1    6[COMRAM] unsigned char 
+  writeCircula    2    7[COMRAM] PTR enum E35
+		 -> UARTISR@e_809(1), writeUARTMessage@e(1), writeUART@e(1), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         5       0       0
+      Locals:         0       0       0
+      Temps:          4       0       0
+      Totals:         9       0       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		i2_circularBufferFull
+ This function is called by:
+		_UARTISR
+ This function uses a non-reentrant model
+
+
+ *************** function i2_circularBufferFull *****************
+ Defined at:
+		line 95 in file "../libs/circular_buffer/circular_buffer.c"
+ Parameters:    Size  Location     Type
+  circularBuff    2    0[COMRAM] PTR struct .
+		 -> receiveBuffer(8), transmitBuffer(8), 
+ Auto vars:     Size  Location     Type
+  circularBuff    2    2[COMRAM] unsigned int 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1
+      Params:         2       0       0
+      Locals:         2       0       0
+      Temps:          0       0       0
+      Totals:         4       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_UARTISR
+		i2_writeCircularBuffer
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+../libs/stepper_motor/stepper_motor_lib.c
+		_release_steppe		CODE           	0E06	0000	170
+		_startStepperMo		CODE           	104E	0000	116
+		_STEPPERISR    		CODE           	06C8	0000	768
+		_stepperMotorFi		CODE           	1308	0000	20
+		_initStepperMot		CODE           	09C8	0000	252
+
+../libs/stepper_motor/stepper_motor_lib.c estimated size: 1326
+
+src/main.c
+		_asciiDigitToIn		CODE           	0FD6	0000	120
+		_main          		CODE           	0254	0000	1140
+		_isr           		CODE           	0008	0000	548
+
+src/main.c estimated size: 1808
+
+shared
+		i2_writeCircula		CODE           	0D48	0000	190
+		__stringdata   		SMALLCONST     	0240	0000	18
+		__initializatio		CODE           	119E	0000	88
+		i2_circularBuff		CODE           	10C2	0000	116
+		main@motor_pins		SMALLCONST     	0234	0000	12
+		_crlfetx_str   		SMALLCONST     	0230	0000	4
+
+shared estimated size: 428
+
+C:\Program Files (x86)\Microchip\xc8\v1.12\sources\wmul.c
+		___wmul        		CODE           	1136	0000	104
+
+C:\Program Files (x86)\Microchip\xc8\v1.12\sources\wmul.c estimated size: 104
+
+../libs/UART/UART_lib.c
+		_initUART      		CODE           	12CC	0000	32
+		_writeUART     		CODE           	1200	0000	76
+		_readUART      		CODE           	124C	0000	72
+		_UARTISR       		CODE           	0F48	0000	142
+		_writeUARTMessa		CODE           	0BAC	0000	216
+
+../libs/UART/UART_lib.c estimated size: 538
+
+../libs/circular_buffer/circular_buffer.c
+		_writeCircularB		CODE           	0AC4	0000	232
+		_circularBuffer		CODE           	0EB0	0000	152
+		_circularBuffer		CODE           	1294	0000	56
+		_readCircularBu		CODE           	0C84	0000	196
+
+../libs/circular_buffer/circular_buffer.c estimated size: 636
+
